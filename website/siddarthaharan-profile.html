@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="H. Siddarthaharan — DevOps / Release Manager portfolio." />
+  <title>H. Siddarthaharan — DevOps & Release Manager</title>
+  <style>
+    :root{
+      --bg:#07111f; --panel:#0c192b; --panel2:#101f34; --text:#eef5ff;
+      --muted:#9eb0c8; --line:#20324b; --accent:#67e8f9; --accent2:#8b5cf6;
+      --green:#22c55e; --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:
+      radial-gradient(circle at 15% 10%,rgba(103,232,249,.09),transparent 28%),
+      radial-gradient(circle at 85% 15%,rgba(139,92,246,.11),transparent 30%),var(--bg);
+      color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav .inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}
+    .links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
+    .hero{padding:105px 0 85px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-flex;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(103,232,249,.05)}
+    h1{font-size:clamp(44px,7vw,82px);line-height:.98;letter-spacing:-.055em;margin:20px 0}
+    .gradient{background:linear-gradient(100deg,#fff 15%,#67e8f9 55%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:18px;color:var(--muted);max-width:720px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px}
+    .btn.primary{background:var(--text);color:#08111e;border-color:var(--text)}
+    .btn:hover{transform:translateY(-1px)}
+    .terminal{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 24px 80px rgba(0,0,0,.25)}
+    .dots{display:flex;gap:7px;margin-bottom:18px}.dots i{width:9px;height:9px;border-radius:50%;background:#334155}
+    pre{margin:0;white-space:pre-wrap;color:#c9d7ea;font:13px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace}
+    .cyan{color:var(--accent)}.purple{color:#c4b5fd}.green{color:#86efac}
+    section{padding:78px 0;border-top:1px solid rgba(255,255,255,.055)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+    h2{font-size:30px;letter-spacing:-.03em;margin:0}.section-head p{margin:0;color:var(--muted);max-width:650px}
+    .summary{font-size:20px;color:#d8e4f2;max-width:940px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .chip{padding:8px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:#c7d6e9;font-size:13px}
+    .timeline{position:relative;margin-top:35px}.timeline:before{content:"";position:absolute;left:8px;top:7px;bottom:7px;width:1px;background:var(--line)}
+    .job{position:relative;padding-left:38px;margin-bottom:38px}.job:before{content:"";position:absolute;left:3px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(103,232,249,.08)}
+    .date{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .job h3{margin:5px 0 0;font-size:21px}.company{color:#c3d1e4;font-weight:650}.job ul{color:var(--muted);margin:12px 0 0;padding-left:18px}.job li{margin:5px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.card h3{margin:0 0 7px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .github{background:linear-gradient(180deg,rgba(16,31,52,.75),rgba(12,25,43,.55));border:1px solid var(--line);border-radius:20px;padding:22px;overflow:hidden}
+    .gh-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:18px}.gh-top p{margin:4px 0 0;color:var(--muted);font-size:14px}
+    .gh-chart{width:100%;overflow:auto;padding:4px 0 8px}
+    .gh-chart img{display:block;min-width:760px;width:100%;height:auto}
+    .education{display:grid;grid-template-columns:1fr 1fr;gap:15px}.edu{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}.edu strong{display:block;font-size:17px}.edu span{color:var(--muted)}
+    .contact{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.contact p{color:var(--muted)}
+    footer{padding:35px 0;color:#71839a;font-size:13px;text-align:center}
+    @media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:75px}.grid{grid-template-columns:1fr 1fr}.education,.contact{grid-template-columns:1fr}}
+    @media(max-width:540px){.wrap{width:min(calc(100% - 28px),var(--max))}.grid{grid-template-columns:1fr}h1{font-size:48px}.hero{padding-bottom:55px}.section-head{display:block}.section-head p{margin-top:10px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap inner">
+      <a class="brand" href="#">H. <span>Siddarthaharan</span></a>
+      <div class="links">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#github">GitHub</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wrap hero">
+      <div>
+        <span class="eyebrow">DevOps · Release · Automation</span>
+        <h1>H. <span class="gradient">Siddarthaharan</span></h1>
+        <p>Release / Automation Manager leading release and automation delivery across applications in 5 countries — combining delivery governance, CI/CD automation, production change management and cross-functional leadership.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:siddarthaharan@gmail.com">Email me ↗</a>
+          <a class="btn" href="https://github.com/siddarthaharan" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn" href="tel:+601164376884">+60 11 6437 6884</a>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="purple">role</span> = <span class="green">"Release / Automation Manager"</span>
+<span class="purple">focus</span> = [<span class="cyan">"CI/CD"</span>, <span class="cyan">"Release"</span>,
+          <span class="cyan">"Automation"</span>, <span class="cyan">"DevOps"</span>]
+<span class="purple">industries</span> = [<span class="green">"Banking"</span>, <span class="green">"Insurance"</span>]
+<span class="purple">experience</span> = <span class="green">"10+ years"</span>
+<span class="purple">languages</span> = [<span class="green">"English"</span>, <span class="green">"Tamil"</span>]</pre>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><h2>Profile</h2><p>Delivery leadership backed by hands-on automation and deployment engineering.</p></div>
+        <p class="summary">Coordinates timelines, dependencies, risk mitigation, and production change approvals while building CI/CD automation with Jenkins, Urban Code Deploy, GitHub, and JFrog. Strengthens system stability by troubleshooting deployment issues, improving release controls, and aligning business, product, and technology teams.</p>
+        <div class="chips">
+          <span class="chip">Release management</span><span class="chip">UAT deployment management</span><span class="chip">Service delivery management</span><span class="chip">Transition management</span><span class="chip">Change management</span><span class="chip">Stakeholder communication</span><span class="chip">Risk management</span><span class="chip">Dependency management</span><span class="chip">Process improvement</span><span class="chip">CAB coordination</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head"><h2>Experience</h2><p>Career history and responsibilities taken directly from the supplied resume.</p></div>
+        <div class="timeline">
+          <article class="job">
+            <div class="date">10/2022 — Current</div><h3>DevOps / Release Manager</h3><div class="company">UOB Bank · Banking</div>
+            <ul>
+              <li>Define delivery timelines, milestones, dependencies and priorities; track scope, schedule, resources and deliverables.</li>
+              <li>Communicate with business, product owners, technology teams, vendors and senior management.</li>
+              <li>Identify delivery risks, maintain the risk register and drive mitigation.</li>
+              <li>Create and improve processes based on production deployment problems and incidents.</li>
+              <li>Implemented CI/CD automation using GitHub, Jenkins and JFrog from commit to deployment.</li>
+              <li>Manage UAT deployment requests and production change creation and approval.</li>
+              <li>Built release comparison, control-M email and CRO automation using Selenium, Java and n8n.</li>
+            </ul>
+            <div class="chips"><span class="chip">Jenkins</span><span class="chip">Rocket Aldon</span><span class="chip">LME</span><span class="chip">Bitbucket</span><span class="chip">Python</span><span class="chip">UNIX</span><span class="chip">Jira</span><span class="chip">n8n</span></div>
+          </article>
+          <article class="job">
+            <div class="date">12/2018 — 10/2022</div><h3>Service Delivery Manager</h3><div class="company">AXA Shared Services · Insurance</div>
+            <ul>
+              <li>Headed transition of the Deployment project to the Cognizant team, including process definition, SOP creation and transition planning.</li>
+              <li>Defined team roles and responsibilities and created roadmaps and milestones.</li>
+              <li>Established operational processes for fast-growing distributed applications.</li>
+              <li>Implemented CI/CD and worked with the cloud team to create cloud infrastructure.</li>
+              <li>Produced management reports, monitored contracts and SLAs, and drove risk mitigation.</li>
+              <li>Contributed to the DevOps roadmap; scripted deployment automation in Shell and PowerShell.</li>
+              <li>Developed automated SOPs for common failure scenarios and participated in Release and CAB calls.</li>
+            </ul>
+            <div class="chips"><span class="chip">Jenkins</span><span class="chip">GIT</span><span class="chip">Pega</span><span class="chip">Informatica</span><span class="chip">Artifactory</span><span class="chip">MySQL</span><span class="chip">Confluence</span><span class="chip">Jira</span><span class="chip">OpenShift</span></div>
+          </article>
+          <article class="job">
+            <div class="date">12/2015 — 11/2018</div><h3>DevOps Engineer</h3><div class="company">Travelers · Insurance</div>
+            <ul>
+              <li>Implemented CI/CD using Jenkins, Urban Code Deploy, BMC Remedy and Selenium.</li>
+              <li>Created Urban Code Deploy automation scripts in PowerShell for Windows and Shell for Linux.</li>
+              <li>Worked with IBM on Urban Code Deploy issues and resolved agent-server connectivity problems.</li>
+              <li>Automated Urban Code Deploy agent installation for Windows and RHEL.</li>
+              <li>Developed Jenkins/SVN CI jobs and automated application testing using JMeter.</li>
+              <li>Used Puppet for deployment automation and software installations.</li>
+            </ul>
+            <div class="chips"><span class="chip">UCD</span><span class="chip">CloudBees Jenkins</span><span class="chip">SVN</span><span class="chip">GIT</span><span class="chip">JMeter</span><span class="chip">Puppet</span><span class="chip">Nexus</span><span class="chip">Linux</span><span class="chip">Windows Server</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><h2>Toolkit</h2><p>Technologies and delivery capabilities listed in the resume.</p></div>
+        <div class="grid">
+          <div class="card"><h3>CI/CD & Automation</h3><p>Jenkins · Urban Code Deploy · GitHub · JFrog · Artifactory · Selenium · n8n</p></div>
+          <div class="card"><h3>Delivery & Operations</h3><p>Release management · UAT deployment · Service delivery · Transition · Change management · CAB</p></div>
+          <div class="card"><h3>Engineering</h3><p>Python · Shell · PowerShell · Java · UNIX · Linux · Windows Server · OpenShift · Kubernetes training</p></div>
+          <div class="card"><h3>Tooling</h3><p>Jira · Rocket Aldon · Bitbucket · BMC Remedy · Confluence · SVN · Nexus · MySQL</p></div>
+          <div class="card"><h3>Leadership</h3><p>Stakeholder communication · Risk management · Dependency management · Process improvement</p></div>
+          <div class="card"><h3>Continuous Improvement</h3><p>Production troubleshooting · automation controls · SOPs · DevOps roadmap contribution</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="github">
+      <div class="wrap">
+        <div class="section-head"><h2>GitHub Activity</h2><p>Live contribution history for <strong>@siddarthaharan</strong>.</p></div>
+        <div class="github">
+          <div class="gh-top">
+            <div><strong>Contribution history</strong><p>The calendar below is loaded directly from GitHub's public contribution endpoint.</p></div>
+            <a class="btn" href="https://github.com/siddarthaharan" target="_blank" rel="noreferrer">Open profile ↗</a>
+          </div>
+          <div class="gh-chart">
+            <img src="https://github.com/users/siddarthaharan/contributions" alt="GitHub contribution calendar for siddarthaharan" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>Education & Certifications</h2><p>Academic background, training and recognition.</p></div>
+        <div class="education">
+          <div class="edu"><strong>Master in Nanotechnology, Nano electronics</strong><span>Education</span></div>
+          <div class="edu"><strong>Bachelor of Engineering, Electronics and Communication</strong><span>Education</span></div>
+          <div class="edu"><strong>Azure Fundamentals — AZ-900</strong><span>2021</span></div>
+          <div class="edu"><strong>Internal training — Kubernetes</strong><span>2021</span></div>
+          <div class="edu"><strong>Training — Shell & Python Scripting</strong><span>2020</span></div>
+          <div class="edu"><strong>Training — Azure AZ-104</strong><span>2024</span></div>
+          <div class="edu"><strong>MVP Award for Release Automation</strong><span>2025</span></div>
+          <div class="edu"><strong>Languages: English · Tamil</strong><span>Languages</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div><h2>Let's connect.</h2><p>For professional opportunities, collaboration or a conversation about release automation and DevOps.</p></div>
+        <div class="actions"><a class="btn primary" href="mailto:siddarthaharan@gmail.com">siddarthaharan@gmail.com</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© H. Siddarthaharan · Release & Automation .</footer>
+</body>
+</html>
